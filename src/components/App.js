@@ -14,9 +14,11 @@ const App =()=>{
     const onClickShowContact=()=>{
         setShowSection(Contact)
     }
-
+const props = {
+    onClickShowAbout,onClickShowProject,onClickShowContact
+}
     return (<div>
-        < NavComponent onClickShowAbout={onClickShowAbout} onClickShowProject={onClickShowProject} onClickShowContact={onClickShowContact}/>
+        < NavComponent props={props}/>
         {ShowSection}
         
     </div>)

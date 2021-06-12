@@ -5,16 +5,16 @@ import Project from '../components/project/Project'
 import Contact from '../components/contact/Contact'
 import Footer from '../components/footer/Footer'
 const App =()=>{
-    const [ShowSection, setShowSection] = useState(About)
+    const [ShowSection, setShowSection] = useState(<About/>)
     const [isRendered,setIsRendered] = useState(false)
     const onClickShowAbout=()=>{
-        setShowSection(About)
+        setShowSection(<About/>)
     }
     const onClickShowProject=()=>{
-        setShowSection(Project)
+        setShowSection(<Project/>)
     }
     const onClickShowContact=()=>{
-        setShowSection(Contact)
+        setShowSection(<Contact/>)
     }
     const onRendered=()=>{
         setIsRendered (false)

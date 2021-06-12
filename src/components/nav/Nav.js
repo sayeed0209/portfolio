@@ -8,7 +8,7 @@ import logo from '../../img/a.svg'
 import logo2 from '../../img/s.svg'
 const NavComponent = ({props:{onClickShowAbout,onClickShowProject,onClickShowContact}}) => {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="p-3 px-5">
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="p-3 px-5 move-down">
       <Navbar.Brand href="#home" ><img src={logo}  width='50px' className="rounded-circle" alt="logo"  /> <img src={logo2}  width='50px' className="rounded-circle" alt="logo"/></Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">

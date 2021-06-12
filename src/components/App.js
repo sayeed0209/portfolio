@@ -3,6 +3,7 @@ import  NavComponent from '../components/nav/Nav'
 import About from '../components/about/About'
 import Project from '../components/project/Project'
 import Contact from '../components/contact/Contact'
+import Footer from '../components/footer/Footer'
 const App =()=>{
     const [ShowSection, setShowSection] = useState(About)
     const [isRendered,setIsRendered] = useState(false)
@@ -27,8 +28,9 @@ const props = {
     onClickShowAbout,onClickShowProject,onClickShowContact,isRendered,onRendered
 }
     return (<div>
-        < NavComponent props={props}/>
+        <NavComponent props={props}/>
         {ShowSection}
+        <Footer props={props}/>
         
     </div>)
 }

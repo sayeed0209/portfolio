@@ -55,8 +55,8 @@ const About = () => {
       </div>
       </div>
      {/*  */}
-     <Container>
-      <Row className="justify-content-center align-items-stretch"> 
+  
+      <div className="d-flex justify-content-center align-items-stretch p-5 shadow-sm"> 
       <Col sm={12} md={4} className="d-flex flex-column justify-content-between">
         <h1 className="text-break display-4">Backend</h1>
          <ul className="list-unstyled p-2 lead">
@@ -71,7 +71,7 @@ const About = () => {
          
          </ul>
       </Col>
-      <Col sm={12} md={4}>
+      <Col sm={12} md={4} className="mb-5">
           <img src={percentageWhite} alt="background" width="100%"  className="px-4"/>
         </Col>
         <Col sm={12} md={4} className="d-flex flex-column justify-content-between text-right">
@@ -85,9 +85,9 @@ const About = () => {
          
          </ul>
         </Col>
-       </Row>
-       </Container>
-    </div>
+       </div>
+       </div>
+    
   );
 };
 

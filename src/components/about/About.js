@@ -1,12 +1,8 @@
-import React,{useRef} from "react";
+import React,{useRef,useState,useEffect} from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import profileIMG from "../../img/profile.png";
 import percentageWhite from "../../img/percentage.PNG";
 import "./About.css";
-
-
-
-
 
 const About = () => {
 const percentageSectionRef= useRef(null)
@@ -16,6 +12,7 @@ const onScrollAnimation =()=>{
   const innerHeight = window.innerHeight
   const scroll =  window.scrollY
   const element = percentageSectionRef.current
+  if(!element)return window.onscroll=null
   if(innerHeight + scroll >= element.offsetTop +200){
     firstUlElement.current.classList.add('move-right')
     secondUlElement.current.classList.add('move-right')
@@ -24,13 +21,14 @@ const onScrollAnimation =()=>{
     secondUlElement.current.classList.remove('move-right')
   }
 }
-window.onscroll = onScrollAnimation
+window.onscroll= onScrollAnimation
+
   return (
     <div className="bg-light">
       <div className="shadow-sm p-5 mb-4 bg-white">
-        <div className="d-flex">
+        <div className="d-flex flex-wrap">
           <Col className="move-right">
-            <h1 className="display-2 font-weight-bold about">About</h1>
+            <h1 className="display-2 font-weight-bold about text-break">About</h1>
             <h2 className="lead my-4">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry.
@@ -53,31 +51,31 @@ window.onscroll = onScrollAnimation
           </Col>
         </div>
         <hr />
-        <div className="d-flex justify-content-center">
-          <Col>
+        <div className="d-flex flex-wrap justify-content-center">
+          <Col xs ={6}sm={3} md={2} className="my-3">
             <img
               src={profileIMG}
               alt="background"
               className="img-thumbnail bg-dark"
             />{" "}
           </Col>
-          <Col>
+          <Col xs ={6}sm={3} md={2} className="my-3">
             <img src={profileIMG} alt="background" className="img-thumbnail" />
           </Col>
-          <Col>
+          <Col xs ={6}sm={3} md={2} className="my-3" >
             <img src={profileIMG} alt="background" className="img-thumbnail" />
           </Col>
-          <Col>
+          <Col xs ={6}sm={3} md={2} className="my-3">
             <img src={profileIMG} alt="background" className="img-thumbnail" />
           </Col>
-          <Col>
+          <Col xs ={6}sm={3} md={2} className="my-3">
             <img src={profileIMG} alt="background" className="img-thumbnail" />
           </Col>
         </div>
       </div>
       {/*  */}
 
-      <div className="d-flex justify-content-center align-items-stretch p-5 shadow-sm" ref={(ref)=>{percentageSectionRef.current=ref}}>
+      <div className="d-flex flex-wrap justify-content-center align-items-stretch p-5 shadow-sm" ref={(ref)=>{percentageSectionRef.current=ref}}>
         <Col
           sm={12}
           md={4}

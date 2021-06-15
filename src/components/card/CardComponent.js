@@ -8,9 +8,9 @@ const CardComponenet=({picture,title,subtitle,description})=>{
       <h2 className="lead my-4">
         {subtitle}
       </h2>
-      <p>
+      <div className="my-2">
         {description}
-      </p>
+      </div>
     </Col>
     <Col sm={12} md={6} lg={5} className="move-left">
       <img

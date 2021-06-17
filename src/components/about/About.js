@@ -1,5 +1,5 @@
-import React,{useRef,useState,useEffect} from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React,{useRef} from "react";
+import { Col } from "react-bootstrap";
 import profileIMG from "../../img/profile.png";
 import percentageWhite from "../../img/percentage.PNG";
 import "./About.css";

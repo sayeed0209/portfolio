@@ -4,8 +4,9 @@ import About from '../components/about/About'
 import Project from '../components/project/Project'
 import Contact from '../components/contact/Contact'
 import Footer from '../components/footer/Footer'
+import Home from '../components/home/Home'
 const App =()=>{
-    const [ShowSection, setShowSection] = useState(<Contact/>)
+    const [ShowSection, setShowSection] = useState(<Home/>)
     const [isRendered,setIsRendered] = useState(false)
     const onClickShowAbout=()=>{
         setShowSection(<About/>)
@@ -19,13 +20,16 @@ const App =()=>{
     const onRendered=()=>{
         setIsRendered (false)
     }
+    const onLogoClick=()=>{
+        setShowSection(<Home/>)
+    }
  
     useEffect(()=>{ 
     setIsRendered (true)
     },[ShowSection])
 
 const props = {
-    onClickShowAbout,onClickShowProject,onClickShowContact,isRendered,onRendered
+    onClickShowAbout,onClickShowProject,onClickShowContact,isRendered,onRendered,onLogoClick
 }
     return (<div>
         <NavComponent props={props}/>

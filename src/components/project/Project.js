@@ -13,8 +13,8 @@ const Project = () => {
   const projectList = ProjectJSON.map((project) => {
     return (
       <Col key={project.id} className=" mb-5" xs={12} sm={6} md={4}>
-        <Card className="h-100 ">
-          <Card.Img variant="top" src={project.img} height={100} />
+        <Card className="h-100 white">
+          <Card.Img variant="top" src={project.img} />
           <Card.Body className="d-flex flex-column justify-content-between">
             <Card.Title>{project.title}</Card.Title>
             <Card.Text>{project.description}</Card.Text>
@@ -27,14 +27,14 @@ const Project = () => {
     );
   });
   return (
-    <div>
+    <div className="white">
       <CardComponenet
         picture={picture}
         title={title}
         subtitle={subtitle}
         description={description}
       />
-      <div className="d-flex flex-wrap  justify-content-center bg-light p-5 shadow-sm">
+      <div className="d-flex flex-wrap  justify-content-center light p-5 shadow-sm">
         {projectList}
       </div>
     </div>

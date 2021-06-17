@@ -6,6 +6,12 @@ import { ReactComponent as GithubIMG } from "../../img/github.svg";
 import { Col, Form,Button} from "react-bootstrap";
 import logo from "../../img/a.svg";
 const Contact = () => {
+  const onIconClick= (link)=>{
+      window.location.href = link
+  }
+
+
+
    const onSubmitForm = (e) => {
     e.preventDefault();
        const validRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -31,21 +37,23 @@ const Contact = () => {
     "Do you speak Na’vi? It's ok if you don't, I speak English too";
   const socialIcon = [
     {
-      SVG: <LinkedinIMG fill="blue" width="100%" className="h-auto" />,
+      SVG: <LinkedinIMG fill="blue" width="100%" className="h-auto" onClick={()=>{onIconClick("https://www.linkedin.com/in/sayeed0209/")}} />,
       title: "Linkedin",
     },
     {
-      SVG: <TwitterIMG fill="skyblue" width="100%" className="h-auto " />,
+      SVG: <TwitterIMG fill="skyblue" width="100%" className="h-auto " onClick={()=>{onIconClick("https://www.linkedin.com/in/sayeed0209/")}}/>,
       title: "Twitter",
+
     },
     {
-      SVG: <GithubIMG fill="black" width="100%" className="h-auto" />,
-      title: "Twitter",
+      SVG: <GithubIMG fill="green" width="100%" className="h-auto" onClick={()=>{onIconClick("https://www.linkedin.com/in/sayeed0209/")}}/>,
+      title: "Github",
+    
     },
   ];
 
   const description = (
-    <div className="d-flex flex-wrap">
+    <div className="d-flex flex-wrap white">
       {socialIcon.map((item, index) => (
         <Col
           xs={10}
@@ -73,14 +81,14 @@ const Contact = () => {
   );
   const picture = logo;
   return (
-    <div>
+    <div className="white">
       <CardComponent
         picture={picture}
         title={title}
         description={description}
         subtitle={subtitle}
       />
-      <Form className="d-flex flex-wrap bg-light p-5"  action="https://formspree.io/f/mjvjrekp"
+      <Form className="d-flex flex-wrap light p-5"  action="https://formspree.io/f/mjvjrekp"
   method="POST" onSubmit={onSubmitForm}>
         <Form.Group className="mb-3" as={Col} xs={6}  controlId="exampleForm.ControlInput1">
           <Form.Label>Name</Form.Label>
@@ -95,7 +103,7 @@ const Contact = () => {
           
           <Form.Control as="textarea" rows={3} name="message" />
         </Form.Group>
-        <Col sm={12}><Button variant="dark" className="py-2 px-5" type="submit">Send</Button></Col>
+        <Col sm={12}><Button variant="dark" className="py-2 px-5 white" type="submit">Send</Button></Col>
       </Form>
     </div>
   );

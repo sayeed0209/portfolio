@@ -1,6 +1,7 @@
 import React ,{useState}from "react";
-import codeImgMix from "../../img/homeimgmix.png";
-import codeImg from "../../img/homeimg.png";
+import codeImgMix from "../../img/newhome.png";
+import codeImg from "../../img/newhome1.png";
+import profile from "../../img/profile.png";
 
 
 
@@ -26,21 +27,27 @@ const Home = () => {
         setHideImageRight('hidden')
     }
   return (
-    <div className="d-flex flex-wrap p-4 bg-light position-relative scale-in-hor-center" onMouseOver={onMouseHover} onMouseOut={onMouseOut }>
-        <Col><h1>title</h1><h1>subtitle</h1></Col>
-        <Col xs ={6}sm={3} md={2} lg={6}><img src={codeImgMix} className="w-100 mb-5 " alt='profile'/></Col>
-        <Col><h1>{title}</h1><h1>subtitle</h1></Col>
-        <div className={`position-absolute d-flex flex-wrap bg-light ${hideImageLeft} w-100 p-4 homecard`}>
-        <Col><h1>title</h1><h1>subtitletitle</h1></Col>
-        <Col xs ={6}sm={3} md={2} lg={6} className="mx-auto"><img src={codeImg} className="w-100 " alt='profile'/></Col>
+      <React.Fragment>
+    <div className="d-flex flex-wrap p-4 white position-relative scale-in-hor-center" onMouseOver={onMouseHover} onMouseOut={onMouseOut }>
+        <Col><h1 className="display-2 font-weight-bold">title</h1><h1 className="display-4">subtitle</h1></Col>
+        <Col xs ={6}sm={3} md={2} lg={6}><img src={codeImgMix} className="w-100  " alt='profile'/></Col>
+        <Col><h1 className="display-2 font-weight-bold">{title}</h1><h1 className="display-4">subtitle</h1></Col>
+        <div className={`position-absolute d-flex flex-wrap white ${hideImageLeft} w-100 p-4 homecard`}>
+        <Col><h1 className="display-2 font-weight-bold">title</h1><h1 className="display-4">subtitletitle</h1></Col>
+        <Col xs ={6}sm={3} md={2} lg={6} className="mx-auto"><img src={profile} className="w-100 " alt='profile'/></Col>
         <Col></Col>
         </div>
-        <div className={`position-absolute d-flex flex-wrap bg-light ${hideImageRight} w-100 p-4  homecard`}>
+        <div className={`position-absolute d-flex flex-wrap white ${hideImageRight} w-100 p-4  homecard`}>
             <Col></Col>
         <Col xs ={6}sm={3} md={2} lg={6}><img src={codeImg} className="w-100" alt='profile'/></Col>
-        <Col><h1>title</h1><h1>subtitletitle</h1></Col>
+        <Col><h1 className="display-2 font-weight-bold">title</h1><h1 className="display-4">subtitletitle</h1></Col>
         </div>
+        
     </div>
+    <div className="light py-5 ">
+            <p className="text-center pb-5 lead">loremSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS</p>
+    </div>
+</React.Fragment>
   );
 };
 

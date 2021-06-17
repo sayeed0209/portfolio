@@ -24,8 +24,8 @@ const onScrollAnimation =()=>{
 window.onscroll= onScrollAnimation
 
   return (
-    <div className="bg-light">
-      <div className="shadow-sm p-5 mb-4 bg-white">
+    <div className="light">
+      <div className="shadow-sm p-5 mb-4 white">
         <div className="d-flex flex-wrap">
           <Col className="move-right">
             <h1 className="display-2 font-weight-bold about text-break">About</h1>

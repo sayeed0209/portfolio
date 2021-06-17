@@ -20,7 +20,11 @@ const NavComponent = ({
   const [darkMode ,setDarkMode] = useState(false)
 
   const onDarkMode=()=>{
-      setDarkMode(!darkMode)
+      setDarkMode((prevValue)=>{
+      document.body.className=!prevValue?'dark':''
+      return !prevValue
+      })
+      
   }
   useEffect(() => {
     if (isRendered) {
@@ -54,14 +58,14 @@ const NavComponent = ({
             About
           </Nav.Link>
           <Nav.Link
-            href="#pricing"
+           
             className={`px-4 mx-4 btn btn-outline-warning ${darkMode?'text-dark':'text-white'}`}
             onClick={onClickShowProject}
           >
             Projects
           </Nav.Link>
           <Nav.Link
-            href="#pricing"
+           
             className={`px-4 btn btn-outline-warning ${darkMode?'text-dark':'text-white'}`}
             onClick={onClickShowContact}
           >

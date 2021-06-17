@@ -5,6 +5,7 @@ import Project from '../components/project/Project'
 import Contact from '../components/contact/Contact'
 import Footer from '../components/footer/Footer'
 import Home from '../components/home/Home'
+import "./App.css";
 const App =()=>{
     const [ShowSection, setShowSection] = useState(<Home/>)
     const [isRendered,setIsRendered] = useState(false)

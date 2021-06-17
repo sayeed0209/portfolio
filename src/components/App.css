@@ -1,0 +1,32 @@
+
+  .light{
+    background:#f8f9fa !important;
+    box-shadow:0 .125rem .25rem rgba(0,0,0,.075)!important;;
+  }
+  .light * {
+    color:black !important;
+    
+  }
+  .white{
+    background:white !important;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;;
+  }
+  .white * {
+    color:black !important;
+  }
+  .dark .white{
+    background:rgb(43, 42, 42) !important;
+    /* -webkit-box-shadow: 5px 5px 15px 5px #e7e4e4 !important;  */
+    box-shadow: 0px 2px 10px #f3efef91 !important;
+  }
+  .dark .white * {
+    color:white !important;
+  }
+
+  .dark .light{
+    background:black !important;
+    box-shadow: 0px 2px 10px #f3efef91 !important;
+  }
+  .dark .light * {
+    color:white !important;
+  }

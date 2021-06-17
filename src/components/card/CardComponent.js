@@ -1,7 +1,7 @@
 import React from 'react';
 import {Col} from 'react-bootstrap'
 const CardComponenet=({picture,title,subtitle,description})=>{
-  return(<div className="shadow-sm p-5 mb-1 bg-white">
+  return(<div className="shadow-sm p-5 mb-1 white">
   <div className="d-flex flex-wrap">
     <Col className="move-right">
       <h1 className="display-2 font-weight-bold about text-break">{title}</h1>

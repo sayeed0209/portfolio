@@ -90,3 +90,11 @@ input:checked + .slider:before {
 input:checked + .slider:before {
   background-color: #ccc;
 }
+.mode{
+  background-color:#fff;
+  margin: 30px;
+}
+.dark .mode{
+  background-color:#000;
+  margin:0;
+}

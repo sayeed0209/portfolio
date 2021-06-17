@@ -1,4 +1,4 @@
-import React,{useState, useEffect} from "react";
+import React from "react";
 import CardComponent from "../card/CardComponent";
 import { ReactComponent as LinkedinIMG } from "../../img/linkedin.svg";
 import { ReactComponent as TwitterIMG } from "../../img/twitter.svg";

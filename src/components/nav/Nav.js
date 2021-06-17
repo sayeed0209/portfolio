@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./Nav.css";
-import { Navbar, Nav } from "react-bootstrap";
-import linkedinIMG from "../../img/linkedin.svg";
-import twitterIMG from "../../img/twitter.svg";
-import githubIMG from "../../img/github.svg";
+import { Navbar, Nav} from "react-bootstrap";
+import{ReactComponent as LinkedinIMG} from "../../img/linkedin.svg";
+import {ReactComponent as TwitterIMG} from "../../img/twitter.svg";
+import{ ReactComponent as GithubIMG} from "../../img/github.svg";
 import logo from "../../img/a.svg";
 import logo2 from "../../img/s.svg";
 const NavComponent = ({
@@ -13,9 +13,15 @@ const NavComponent = ({
     onClickShowContact,
     isRendered,
     onRendered,
+    onLogoClick
   },
 }) => {
   const [navbarClass, setNavbarClass] = useState(`p-3 px-5 move-down`);
+  const [darkMode ,setDarkMode] = useState(false)
+
+  const onDarkMode=()=>{
+      setDarkMode(!darkMode)
+  }
   useEffect(() => {
     if (isRendered) {
       setNavbarClass(`p-3 px-5 move-down`);
@@ -30,64 +36,54 @@ const NavComponent = ({
     <Navbar
       collapseOnSelect
       expand="lg"
-      bg="dark"
+      bg={darkMode?'light':'dark'}
       variant="dark"
       className={navbarClass}
     >
-      <Navbar.Brand href="#home">
-        <img src={logo} width="50px" className="rounded-circle" alt="logo" />{" "}
+      <Navbar.Brand href="#home" onClick={onLogoClick}>
+        <img src={logo} width="50px" className="rounded-circle" alt="logo" />
         <img src={logo2} width="50px" className="rounded-circle" alt="logo" />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="ml-auto">
+        <Nav className="ml-auto align-items-center">
           <Nav.Link
-            className="px-4 btn btn-outline-warning text-white"
+            className={`px-4 btn btn-outline-warning ${darkMode?'text-dark':'text-white'}`}
             onClick={onClickShowAbout}
           >
             About
           </Nav.Link>
           <Nav.Link
             href="#pricing"
-            className="px-4"
+            className={`px-4 mx-4 btn btn-outline-warning ${darkMode?'text-dark':'text-white'}`}
             onClick={onClickShowProject}
           >
             Projects
           </Nav.Link>
           <Nav.Link
             href="#pricing"
-            className="px-4"
+            className={`px-4 btn btn-outline-warning ${darkMode?'text-dark':'text-white'}`}
             onClick={onClickShowContact}
           >
             Contact
           </Nav.Link>
           <Nav.Link
             href="https://www.linkedin.com/in/sayeed0209/"
-            className="px-4"
+            className="mx-4"
           >
-            <img
-              src={linkedinIMG}
-              className="text-light"
-              width="30px"
-              alt="linkedin"
-            />
+           <LinkedinIMG width="35" height="35" fill={darkMode?'blue':'white'}/>
           </Nav.Link>
-          <Nav.Link href="#deets" className="px-4">
-            <img
-              src={twitterIMG}
-              className="text-light"
-              width="30px"
-              alt="twitter"
-            />
+          <Nav.Link href="#deets" className="mx-2">
+          <TwitterIMG width="40" height="40" fill={darkMode?'skyblue':'white'}/>
           </Nav.Link>
-          <Nav.Link href="#deets" className="px-4">
-            <img
-              src={githubIMG}
-              className="text-light"
-              width="30px"
-              alt="github"
-            />
+          <Nav.Link href="#deets" className="mx-2">
+          <GithubIMG width="40" height="40" fill={darkMode?'dark':'white'}/>
           </Nav.Link>
+
+          <label class="switch ml-4">
+            <input type="checkbox" onChange={onDarkMode}/>
+            <span class="slider round"></span>
+          </label>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

@@ -1,6 +1,6 @@
 import React from "react";
 import CardComponenet from "../card/CardComponent";
-import { Card, Button, Col } from "react-bootstrap";
+import { Card, Col } from "react-bootstrap";
 import codeImg from "../../img/code.PNG";
 import ProjectJSON from "../../db/project.json";
 const Project = () => {
@@ -13,9 +13,9 @@ const Project = () => {
   const projectList = ProjectJSON.map((project) => {
     return (
       <Col key={project.id} className=" mb-5" xs={12} sm={6} md={4}>
-        <Card>
-          <Card.Img variant="top" src={project.img} />
-          <Card.Body>
+        <Card className="h-100 ">
+          <Card.Img variant="top" src={project.img} height={100} />
+          <Card.Body className="d-flex flex-column justify-content-between">
             <Card.Title>{project.title}</Card.Title>
             <Card.Text>{project.description}</Card.Text>
             <a className="btn btn-primary" href={project.link}>

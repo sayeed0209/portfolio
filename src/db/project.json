@@ -1,15 +1,15 @@
 [
     {
         "id":1,
-        "title":"project one",
-        "description":"500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing",
+        "title":"Meal Finder",
+        "description":"Find your favorite meal by typing the name :) By default you will see all the Meal with the name of #chicken#!!, You can type any type of meal you would like to find(Ex: Meat,fish,vegetarian etc.) there will appear lots of diffrent types of food from diffrent origin . By default the first meal will apear with cooking instructions.If you want see other meal cooking instructions you can just click and it will show you the the ingredients and instructions of particular recipe :)# meal-finder-with-react",
         "link": "https://meal-finder-with-react.herokuapp.com/",
         "img":"https://raw.githubusercontent.com/sayeed0209/meal-finder-with-react/main/img/meal-finder.PNG"
     },
     {
         "id":2,
-        "title":"project one",
-        "description":"500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing",
+        "title":"Today's Weather",
+        "description":"You can find today's weather forecast from anywhere in the world, including real time updates",
         "link": "https://sayeed0209.github.io/Weather-API/index.html",
         "img":"https://raw.githubusercontent.com/sayeed0209/Weather-API/main/weather.PNG"
     },

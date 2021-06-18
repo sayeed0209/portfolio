@@ -111,6 +111,7 @@ const Contact = () => {
 				description={description}
 				subtitle={subtitle}
 			/>
+			
 			<Form
 				className='d-flex flex-wrap light p-5'
 				action='https://formspree.io/f/mjvjrekp'

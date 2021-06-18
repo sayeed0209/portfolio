@@ -6,6 +6,8 @@ import { ReactComponent as TwitterIMG } from "../../img/twitter.svg";
 import { ReactComponent as GithubIMG } from "../../img/github.svg";
 import logo from "../../img/a.svg";
 import logo2 from "../../img/s.svg";
+import { ReactComponent as DownloadIcon } from "../../img/resume.svg";
+import resume from "../../img/resume.pdf";
 const NavComponent = ({
 	props: {
 		onClickShowAbout,
@@ -101,8 +103,15 @@ const NavComponent = ({
 							fill={darkMode ? "dark" : "white"}
 						/>
 					</Nav.Link>
+					<Nav.Link href={resume} download className='mx-2'>
+						<DownloadIcon
+							width='40'
+							height='40'
+							fill={darkMode ? "dark" : "white"}
+						/>
+					</Nav.Link>
 
-					<label className='switch ml-4 my-2'>
+					<label className='switch my-2 ml-2'>
 						<input type='checkbox' onChange={onDarkMode} />
 						<span className='slider round'></span>
 					</label>
